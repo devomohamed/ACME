@@ -13,7 +13,7 @@ import { SmallbanarComponent } from './components/smallbanar/smallbanar.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { PersonComponent } from './components/person/person.component';
 import { TvMovieComponent } from './components/tv-movie/tv-movie.component';
-import { MytvComponent } from './components/mytv/mytv.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -29,13 +29,13 @@ import { MytvComponent } from './components/mytv/mytv.component';
     HeroComponent,
     SmallbanarComponent,
     PersonComponent,
-    MytvComponent,
     TvMovieComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
+    CarouselModule
   ],exports:[
     HeaderComponent,
     MovieComponent,
@@ -43,7 +43,8 @@ import { MytvComponent } from './components/mytv/mytv.component';
     HeroComponent,
     SmallbanarComponent,
     PersonComponent,
-    TvMovieComponent
+    TvMovieComponent,
+    CarouselModule
   ]
 })
 export class SharedModule { }

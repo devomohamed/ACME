@@ -18,7 +18,7 @@ export class PeopleComponent implements OnInit {
 
   constructor(private personService:PersonService){}
 
-  getMostPopular(){
+  getPeople(){
     this.personService.getPeopleList(this.page).subscribe((person:any)=>{
       console.log(person);
       this.persons = person.results
@@ -28,27 +28,28 @@ export class PeopleComponent implements OnInit {
     })
   }
 
+
   nextPage(){
     if(this.page < this.lastPage){
       this.page += 1
-      this.getMostPopular()
+      this.getPeople()
     }
   }
 
   previousPage(){
     if(this.page > 1){
       this.page -= 1
-      this.getMostPopular()
+      this.getPeople()
     }
   }
 
   changePageTo(page:number){
     this.page = page
-    this.getMostPopular()
+    this.getPeople()
   }
 
   ngOnInit(): void {
-    this.getMostPopular()
+    this.getPeople()
   }
 
 

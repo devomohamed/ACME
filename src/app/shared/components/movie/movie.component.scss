@@ -1,6 +1,9 @@
 .card{
   position: unset !important;
   cursor: pointer;
+  img{
+    max-height: 270px;
+  }
   .card-text , .card-title{
     width: 100%;
   overflow: hidden;

@@ -4,8 +4,8 @@
       <img [src]="url+data.poster_path" alt="">
     </div>
     <div class="text text-center">
-      <h3 class="title">{{data.original_title}}</h3>
-      <p>{{data.title}}</p>
+      <h3 class="title">{{data.original_name}}</h3>
+      <p>{{data.name}}</p>
 
       <div class="rate"><img width="20" height="20" class="mr-2" src="../../../assets/svg/star-svgrepo-com.svg" alt=""> &nbsp;<span>{{data.vote_average}}</span></div>
     </div>
@@ -26,11 +26,4 @@
       </div>
     </div>
   </div>
-  <div class="slider" *ngIf="movies">
-    <h2 class="mb-5" *ngIf="!movies">Similar</h2>
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide *ngFor="let movie of movies">
-        <div class="slide"><app-movie [movie]="movie"></app-movie></div>
-      </ng-template>
-    </owl-carousel-o>
 </div>

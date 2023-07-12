@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'tv', loadChildren: () => import('./modules/tv/tv.module').then(m => m.TvModule) },
   { path: 'people', loadChildren: () => import('./modules/people/people.module').then(m => m.PeopleModule) },
   { path: 'persondetails/:id', loadChildren: () => import('./modules/persondetails/persondetails.module').then(m => m.PersondetailsModule) },
+  { path: 'tvdetails/:id', loadChildren: () => import('./modules/tv-details/tv-details.module').then(m => m.TvDetailsModule) },
 ];
 
 @NgModule({

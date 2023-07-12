@@ -25,15 +25,20 @@ export class MoviesService {
   getTvList(page:number = 1){
     return this.http.get(`${this.api}tv/popular?page=${page}&language=en-US&api_key=${this.apiKey}`)
   }
+  // Get tv Details
+  getTvDetails(id:number){
+    return this.http.get(`${this.api}tv/${id}?language=en-US&api_key=${this.apiKey}`)
+  }
 
+  // Get Movies Created By Actor
   getMovieCredits(id:any){
     return this.http.get(`${this.api}person/${id}/movie_credits?language=en-US&api_key=${this.apiKey}`)
   }
 
-
-
-
-
+  // Get Movies Created By Actor
+  getSimilarMovies(id:any){
+    return this.http.get(`${this.api}movie/${id}/similar?language=en-US&api_key=${this.apiKey}`)
+  }
 
 
 }

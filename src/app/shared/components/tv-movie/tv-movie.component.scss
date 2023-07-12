@@ -1,5 +1,8 @@
 .card{
   position: unset !important;
+  img{
+    max-height: 380;
+  }
   cursor: pointer;
   .card-title{
   width: 100%;

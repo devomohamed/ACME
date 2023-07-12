@@ -1,9 +1,31 @@
 <app-hero [title]="'Welcome To Movies'" [subtitle]="'Experience the ultimate entertainment destination with our vast collection of movies and TV shows.'" [image]="'../../../../assets/images/pexels-martin-lopez-1117132.jpg'"></app-hero>
 
-<section class="Most-popular mt-5 pt-3">
+<section class="Most-popular my-3">
   <div class="cards my-3 w-100 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
     <div class="col" *ngFor="let movie of movies">
       <app-movie [movie]="movie"  [routerLink]="'/moviedetails/'+movie.id"></app-movie>
     </div>
   </div>
+</section>
+
+<section>
+  <div class="slider my-3" *ngIf="actors">
+    <h2 class="text-center" *ngIf="actors">Actors</h2>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let actor of actors">
+        <div class="slide"><app-person [person]="actor"></app-person></div>
+      </ng-template>
+    </owl-carousel-o>
+</div>
+</section>
+
+<section>
+  <div class="slider my-3" *ngIf="tvs">
+    <h2 class="text-center">Tvs</h2>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let tv of tvs">
+        <div class="slide"><app-tv-movie [tv]="tv"></app-tv-movie></div>
+      </ng-template>
+    </owl-carousel-o>
+</div>
 </section>

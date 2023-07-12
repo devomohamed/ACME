@@ -2,7 +2,7 @@
   <app-smallbanar [title]="'Movies'" [image]="'../../../assets/images/pexels-davide-de-giovanni-1649683.jpg'"></app-smallbanar>
   <div class="cards my-3 w-100 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
     <div class="col" *ngFor="let movie of movies">
-      <app-movie [movie]="movie"  [routerLink]="'/moviedetails/'+movie.id"></app-movie>
+      <app-movie [movie]="movie"></app-movie>
     </div>
   </div>
   <nav aria-label="Page navigation example">

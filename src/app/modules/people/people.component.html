@@ -2,7 +2,7 @@
   <app-smallbanar [title]="'People'" [image]="'../../../assets/images/pexels-pixabay-45258.jpg'"></app-smallbanar>
   <div class="cards my-3 w-100 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
     <div class="col" *ngFor="let person of persons">
-      <app-person [person]="person"  [routerLink]="'/persondetails/'+person.id"></app-person>
+      <app-person [person]="person"></app-person>
     </div>
   </div>
   <nav aria-label="Page navigation example">

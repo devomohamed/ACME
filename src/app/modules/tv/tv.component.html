@@ -2,7 +2,7 @@
   <app-smallbanar [title]="'TV'" [image]="'../../../assets/images/pexels-lisa-fotios-1444416.jpg'"></app-smallbanar>
   <div class="cards my-3 w-100 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
     <div class="col" *ngFor="let tv of tvs">
-      <app-tv-movie [tv]="tv"  [routerLink]="'/moviedetails/'+tv.id"></app-tv-movie>
+      <app-tv-movie [tv]="tv"></app-tv-movie>
     </div>
   </div>
   <nav aria-label="Page navigation example">

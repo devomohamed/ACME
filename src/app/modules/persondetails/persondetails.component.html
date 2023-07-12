@@ -1,0 +1,15 @@
+<div class="persondetails mt-5 pt-5">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <img [src]="url+person.profile_path" alt="">
+        <h4>({{person.birthday}})</h4>
+      </div>
+      <div class="col">
+        <h2>{{person.name}}  ({{person.known_for_department}})</h2>
+        <h4>{{person.place_of_birth}}</h4>
+        <p class="mt-3">{{person.biography}}</p>
+      </div>
+    </div>
+  </div>
+</div>

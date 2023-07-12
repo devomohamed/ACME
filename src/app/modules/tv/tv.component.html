@@ -1,0 +1,23 @@
+<section class="Most-popular mt-5 pt-3">
+  <app-smallbanar [title]="'TV'" [image]="'../../../assets/images/pexels-lisa-fotios-1444416.jpg'"></app-smallbanar>
+  <div class="cards my-3 w-100 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+    <div class="col" *ngFor="let tv of tvs">
+      <app-tv-movie [tv]="tv"  [routerLink]="'/moviedetails/'+tv.id"></app-tv-movie>
+    </div>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [ngClass]="{'disabled':page - 1 < 1}" (click)="previousPage()">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item" [ngClass]="{'disabled':page - 1 < 1}"  *ngIf="page-1 != 0" (click)="changePageTo(page-1)"><a class="page-link">{{page - 1}}</a></li>
+      <li class="page-item active"><a class="page-link">{{page}}</a></li>
+      <li class="page-item" [ngClass]="{'disabled':page + 1 >= lastPage}" *ngIf="page != lastPage || page + 1 < lastPage" (click)="changePageTo(page+1)"><a class="page-link">{{page + 1}}</a></li>
+      <li class="page-item" [ngClass]="{'disabled':page + 1 >= lastPage}" *ngIf="page != lastPage"><a class="page-link">...</a></li>
+      <li class="page-item" [ngClass]="{'disabled':page + 1 >= lastPage}" *ngIf="page != lastPage"><a class="page-link">{{lastPage}}</a></li>
+      <li class="page-item" [ngClass]="{'disabled':page + 1 >= lastPage}" (click)="nextPage()">
+        <a class="page-link">Next</a>
+      </li>
+    </ul>
+  </nav>
+</section>

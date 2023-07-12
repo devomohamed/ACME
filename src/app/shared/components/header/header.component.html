@@ -1,0 +1,28 @@
+
+<!-- start nav -->
+<nav appHeaderappear id="nav" class="fixed-top">
+  <div class="container py-3 d-flex justify-content-between align-items-center ">
+    <!-- start Brand Name -->
+  <h2 class="brand"><a routerLink="/home">ACME</a></h2>
+  <!-- end Brand Name -->
+  <!-- start links -->
+  <ul class="links d-none d-lg-flex">
+    <li class="mx-3  py-2 cursor-pointer" [routerLink]="['/movies']" routerLinkActive="active"><a>Movies</a></li>
+    <li class="mx-3  py-2 cursor-pointer" [routerLink]="['/tv']" routerLinkActive="active"><a>Tv</a></li>
+    <li class="mx-3  py-2 cursor-pointer" [routerLink]="['/people']" routerLinkActive="active"><a>People</a></li>
+    <li class="mx-3  py-2 cursor-pointer" [routerLink]="['/contact']" routerLinkActive="active"><a>Contact</a></li>
+  </ul>
+  <!-- end links -->
+  <!-- start Menu Icon -->
+  <app-menu-icon class="d-block d-lg-none " (click)="opened = !opened"></app-menu-icon>
+  <!-- end Menu Icon -->
+</div>
+</nav>
+<!-- end nav -->
+
+<ul appMenuappear class="menu-mobile d-block d-lg-none text-center"  [ngClass]="{'opened': opened}">
+  <li class="py-4" (click)="opened = false"><a [routerLink]="['/movies']" routerLinkActive="active">Movies</a></li>
+  <li class="py-4" (click)="opened = false"><a [routerLink]="['/tv']" routerLinkActive="active">Tv</a></li>
+  <li class="py-4" (click)="opened = false"><a [routerLink]="['/people']" routerLinkActive="active">People</a></li>
+  <li class="py-4" (click)="opened = false"><a [routerLink]="['/contact']" routerLinkActive="active">Contact</a></li>
+</ul>

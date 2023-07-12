@@ -1,0 +1,7 @@
+<a class="card" style="z-index: 0 !important;" >
+  <img [src]="url+movie.backdrop_path" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.title}}</h5>
+    <p class="card-text">{{movie.overview | textLimit:10}}</p>
+  </div>
+</a>

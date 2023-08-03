@@ -1,0 +1,29 @@
+<div class="movie-details">
+  <div class="banner" style="background-image: url({{url+data.backdrop_path}});">
+    <div class="movie-image">
+      <img [src]="url+data.poster_path" alt="">
+    </div>
+    <div class="text text-center">
+      <h3 class="title">{{data.original_name}}</h3>
+      <p>{{data.name}}</p>
+
+      <div class="rate"><img width="20" height="20" class="mr-2" src="../../../assets/svg/star-svgrepo-com.svg" alt=""> &nbsp;<span>{{data.vote_average}}</span></div>
+    </div>
+  </div>
+  <div class="information">
+    <div class="container ">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="genre d-flex flex-wrap">
+            <span class="d-block" *ngFor="let genre of data.genres">{{genre.name}}</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <p>{{data.overview}}</p>
+          <!-- <br> -->
+          <p>{{data.tagline}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
